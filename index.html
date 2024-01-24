@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <nav>
+        <div class="logo_container">
+            <img src="./img/logo.png" alt="logo" srcset="">
+            <h3>LOGO</h3>
+        </div>
+
+        <ul class="menulink_container">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="menubar">
+            <span class="material-symbols-outlined" onclick="openMenu()">
+                menu
+            </span>
+        </div>
+        <div class="mobile_menu_container" id="mobile_menu_container">
+            <span class="material-symbols-outlined close_button" onclick="closeMenu()">
+                close
+                </span>
+            <ul class="menu_list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+        var menu = document.getElementById("mobile_menu_container");
+
+        const openMenu = () =>{
+            menu.style.transform = "translateX(0)";
+        }
+        const closeMenu = () =>{
+            menu.style.transform = "translateX(-100%)";
+        }
+        
+    </script>
+</body>
+</html>
